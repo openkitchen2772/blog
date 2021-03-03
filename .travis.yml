@@ -11,6 +11,8 @@ script:
 after_success:
   - docker build -t william2772/blog-client -f ./daily-blog/Dockerfile ./daily-blog
   - docker build -t william2772/blog-api -f ./api/Dockerfile ./api
+  - docker build -t william2772/blog-nginx -f ./nginx/Dockerfile ./nginx
   - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD 
   - docker push william2772/blog-client
   - docker push william2772/blog-api
+  - docker push william2772/blog-nginx

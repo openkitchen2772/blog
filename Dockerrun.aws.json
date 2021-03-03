@@ -1,0 +1,32 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "blog",
+            "hostname": "blog",
+            "image": "william2772/blog-client",
+            "essential": false,
+            "memory": "128"
+        },
+        {
+            "name": "api",
+            "hostname": "api",
+            "image": "william2772/blog-api",
+            "essential": false,
+            "memory": "128"
+        },
+        {
+            "name": "nginx",
+            "image": "william2772/blog-nginx",
+            "portMappings": [
+                {
+                    "hostPort": "80",
+                    "containerPort": "80"
+                }
+            ],
+            "links": ["blog", "api"],
+            "essential": true,
+            "memory": "128"
+        }
+    ]
+}
