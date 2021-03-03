@@ -1,4 +1,4 @@
-FROM node:alpine as blog-build
+FROM node:14.14.0-alpine as blog-build
 
 WORKDIR /app
 
