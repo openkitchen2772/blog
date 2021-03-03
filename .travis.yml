@@ -16,3 +16,15 @@ after_success:
   - docker push william2772/blog-client
   - docker push william2772/blog-api
   - docker push william2772/blog-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: blog
+  env: Blog-env
+  bucket_name: elasticbeanstalk-us-east-2-571983945258
+  bucket_path: blog
+  on:
+    branch: master
+  access_key_id: $AWS_ID
+  secret_access_key: $AWS_PASSWORD
