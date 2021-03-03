@@ -6,7 +6,7 @@
             "hostname": "blog",
             "image": "william2772/blog-client",
             "essential": false,
-            "memory": "512"
+            "memory": "128"
         },
         {
             "name": "api",
