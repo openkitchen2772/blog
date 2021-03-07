@@ -1,0 +1,33 @@
+.NavigationItem {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    box-sizing: border-box;
+}
+
+.NavigationItem a {
+    color: white;
+    font-size: 14pt;
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.SelectMark {
+    margin: 0px 5px;
+}
+
+.NavigationItem a:not([class]) .SelectMark {
+    opacity: 0;
+}
+
+.NavigationItem a:hover .SelectMark {
+    opacity: 100;
+    color: #999999;
+    transition: opacity 0.3s ease-in;
+}
+
+.NavigationItem a:has([class*="active"]) .SelectMark {
+    opacity: 100;
+}

@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
+
 import axios from 'axios';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import Layout from './hoc/Layout/Layout';
+
+import './App.css';
 
 function App() {
-  const [UIState, setUIState] = useState({
-    title: ""
-  });
+  // const [UIState, setUIState] = useState({
+  //   title: ""
+  // });
 
-  useEffect(() => {
-    axios.get("/api/hello")
-      .then(response => {
-        setUIState({ title: response.data })
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("/api/hello")
+  //     .then(response => {
+  //       setUIState({ title: response.data })
+  //     });
+  // }, []);
 
   const titleStyle = {
     display: "inline-block",
@@ -37,16 +41,19 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <div style={{textAlign: "center"}}>
-        <h1 style={titleStyle}>Great Daily Blog</h1>
+    <BrowserRouter>
+      <div className="App">
+        <Layout />
+        {/* <div style={{textAlign: "center"}}>
+          <h1 style={titleStyle}>Great Daily Blog</h1>
+        </div>
+        <div style={mainStyle}>
+          <h2>{UIState.title}</h2>
+          <h3>Coming soon ...</h3>
+          <FontAwesomeIcon icon={faCoffee} style={iconStyle} />
+        </div> */}
       </div>
-      <div style={mainStyle}>
-        <h2>{UIState.title}</h2>
-        <h3>Coming soon ...</h3>
-        <FontAwesomeIcon icon={faCoffee} style={iconStyle} />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
