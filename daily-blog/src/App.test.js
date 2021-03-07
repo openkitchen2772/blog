@@ -10,6 +10,6 @@ configure({ adapter: new Adapter() })
 describe("<App />", () => {
     it('should render a <App /> as root element', () => {
         const wrapper = shallow(<App />);
-        expect(wrapper.hasClass("App")).toEqual(true);
+        expect(wrapper.find("div").first().hasClass("App")).toEqual(true);
     });
 })
