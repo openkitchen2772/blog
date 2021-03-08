@@ -1,0 +1,37 @@
+.Blog {
+    width: 92%;
+    padding: 20px 0px 0px 30px;
+    opacity: 0;
+}
+
+.Show {
+    opacity: 100;
+    transition: opacity 0.5s ease-out;
+}
+
+.Header {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Search {
+    outline: none;
+    padding: 3px;
+    font-family: inherit;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+
+.Search:focus {
+    outline: none;
+    border: 1px solid #83bdf3;
+    box-shadow: 0px 0px 7px #83bdf3;
+}
+
+.Content {
+    padding-left: 100px;
+    box-sizing: border-box;
+}

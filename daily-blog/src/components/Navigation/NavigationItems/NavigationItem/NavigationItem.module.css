@@ -23,7 +23,7 @@
 }
 
 .NavigationItem a:hover .SelectMark {
-    opacity: 100;
+    opacity: 1;
     color: #999999;
     transition: opacity 0.3s ease-in;
 }

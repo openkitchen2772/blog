@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
+import './App.css';
 import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import Layout from './hoc/Layout/Layout';
-
-import './App.css';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import Blog from './containers/Blog/Blog';
 
 function App() {
   // const [UIState, setUIState] = useState({
@@ -43,15 +42,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Layout />
-        {/* <div style={{textAlign: "center"}}>
-          <h1 style={titleStyle}>Great Daily Blog</h1>
-        </div>
-        <div style={mainStyle}>
-          <h2>{UIState.title}</h2>
-          <h3>Coming soon ...</h3>
-          <FontAwesomeIcon icon={faCoffee} style={iconStyle} />
-        </div> */}
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={Blog} />
+            <Route path="/projects" render={() => <div>Projects Page</div>} />
+            <Route path="/about" render={() => <div>About Page</div>} />
+            <Redirect to="/" />
+          </Switch>
+        </Layout>
       </div>
     </BrowserRouter>
   );
