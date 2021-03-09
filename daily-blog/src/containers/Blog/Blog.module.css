@@ -1,3 +1,9 @@
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
 .Blog {
     width: 92%;
     padding: 20px 0px 0px 30px;
@@ -5,8 +11,8 @@
 }
 
 .Show {
-    opacity: 100;
-    transition: opacity 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: forwards;
 }
 
 .Header {

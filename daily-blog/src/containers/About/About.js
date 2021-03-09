@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import classes from './About.module.css';
 import Signature from '../../assets/images/signature.png';
@@ -10,7 +11,10 @@ const About = (props) => {
 
     useEffect(() => {
         setShowAbout(true);
-    }, [])
+        return () => {
+            console.log("[About.js] About to unmount ...")
+        }
+    }, []);
 
     return (
         <div className={showAbout ? [classes.About, classes.Show].join(' ') : classes.About}>
