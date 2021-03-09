@@ -1,0 +1,60 @@
+.Project {
+    width: 700px;
+    height: 30vh;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    box-shadow: 4px 6px 5px #cccccc;
+    text-align: center;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.3s ease-out;
+}
+
+.Project:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.3s ease-out;
+}
+
+.Content {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Icon {
+    width: 35%;
+    /* border-radius: 10px;
+    box-shadow: 2px 3px 4px #ccc; */
+}
+
+.Detail {
+    width: 65%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ProjectTitle {
+   margin-bottom: 10px;
+   color: #555555;
+   font-size: 16pt;
+   font-weight: bold;
+}
+
+.ProjectDescription {
+    color: #666666;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.ProjectTags {
+    color: #888888;
+    font-size: 10pt;
+}

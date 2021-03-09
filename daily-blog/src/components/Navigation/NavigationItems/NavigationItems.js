@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './NavigationItems.module.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const navigationItems = (props) => {
+const NavigationItems = (props) => {
     return (
         <nav>
             <ul className={classes.NavigationItems}>
@@ -16,4 +16,4 @@ const navigationItems = (props) => {
     );
 }
 
-export default navigationItems;
+export default NavigationItems;

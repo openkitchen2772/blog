@@ -5,7 +5,7 @@ import classes from './NavigationItem.module.css';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const navigationItem = (props) => {
+const NavigationItem = (props) => {
     return (
         <li className={classes.NavigationItem}>
             <NavLink to={props.link} exact={props.exact}>
@@ -17,4 +17,4 @@ const navigationItem = (props) => {
     )
 }
 
-export default navigationItem;
+export default NavigationItem;

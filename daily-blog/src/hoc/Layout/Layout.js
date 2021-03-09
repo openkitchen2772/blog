@@ -4,7 +4,7 @@ import classes from './Layout.module.css';
 import Auxiliary from '../Auxiliary/Auxiliary'
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
-const layout = (props) => {
+const Layout = (props) => {
     return (
         <Auxiliary>
             <SideDrawer show />
@@ -15,4 +15,4 @@ const layout = (props) => {
     );  
 }
 
-export default layout;
+export default Layout;

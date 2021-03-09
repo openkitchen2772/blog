@@ -1,14 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import { faGithub  } from '@fortawesome/free-brands-svg-icons';
+import { faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 import classes from './SideDrawer.module.css';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Logo from '../../UI/Logo/Logo';
 
-const sideDrawer = (props) => {
+const SideDrawer = (props) => {
     let sideDrawerClasses = [classes.SideDrawer, classes.Open];
     if(!props.show) {
         sideDrawerClasses = [classes.SideDrawer, classes.Close];
@@ -21,13 +21,13 @@ const sideDrawer = (props) => {
                     <Logo />
                 </div>
                 <div className={classes.BlogTitle}>
-                    <h3>William Ko</h3>
+                    <h3>William's Blog</h3>
                     <p>ReactJS | GoLang | .NET</p>
                     <p>Front-end | Back-end Developer</p>
                 </div>
                 <div className={classes.ExternalLinks}>
                     <div className={classes.ExternalLink}><a href="https://github.com/openkitchen2772?tab=repositories" target="_blank"><FontAwesomeIcon icon={faGithub} size="lg"/> Github</a></div>
-                    <div className={classes.ExternalLink}><a href="mailto: willy1994722012@gmail.com"><FontAwesomeIcon icon={faEnvelope} size="lg"/> Email</a></div>
+                    <div className={classes.ExternalLink}><a href="https://www.linkedin.com/in/wing-lam-ko-495371142/" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="lg"/> Linkedln</a></div>
                 </div>
             </header>
 
@@ -49,4 +49,4 @@ const sideDrawer = (props) => {
     )
 }
 
-export default sideDrawer;
+export default SideDrawer;

@@ -1,0 +1,36 @@
+.About {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    transform: translateY(-100vh);
+}
+
+.Show {
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+
+.Content {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    text-align: left;
+    border: 1px solid #aaaaaa;
+}
+
+.Name {
+    color: #555555;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.Signature {
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+}
