@@ -2,10 +2,20 @@ FROM golang:alpine
 
 WORKDIR /go/src
 
-COPY . .
-RUN go mod init api
-RUN go get -d -v github.com/julienschmidt/httprouter
-RUN go install -v github.com/julienschmidt/httprouter
+COPY ./go.mod .
+COPY ./go.sum .
+
+RUN go get -v github.com/julienschmidt/httprouter
+RUN go get -v go.mongodb.org/mongo-driver/mongo
+RUN go get -v github.com/aws/aws-sdk-go
+
+COPY ./controller ./controller
+COPY ./model ./model
+COPY ./api.go .
+COPY ./keys.go .
+COPY ./Dockerfile .
+COPY ./Dockerfile.dev .
+
 RUN go build -v
 
 ENTRYPOINT [ "./api" ]
