@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import './App.css';
-import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './hoc/Layout/Layout';
 import { Route, Redirect, Switch } from 'react-router-dom';

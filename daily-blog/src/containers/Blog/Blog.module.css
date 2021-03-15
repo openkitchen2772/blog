@@ -38,6 +38,6 @@
 }
 
 .Content {
-    padding-left: 100px;
     box-sizing: border-box;
+    text-align: center;
 }
