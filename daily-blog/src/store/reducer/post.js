@@ -2,6 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     posts: [],
+    fullPost: {},
     error: false
 }
 
@@ -19,6 +20,12 @@ const reducer = (state = initialState, action) => {
                 posts: [],
                 error: true
             };
+        case actionTypes.SET_FULL_POST:
+            const fullPost = state.posts.find(p => p.id == action.id);
+            return {
+                ...state,
+                fullPost: fullPost
+            }
         default:
             return state;
     }

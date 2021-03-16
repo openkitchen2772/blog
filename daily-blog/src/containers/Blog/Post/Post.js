@@ -18,7 +18,7 @@ const post = (props) => {
             </p>
 
             <div className={classes.ReadMore}>
-                <Link to="#">Read More</Link>
+                <Link to={props.link}>Read More</Link>
             </div>
         </div>
     );

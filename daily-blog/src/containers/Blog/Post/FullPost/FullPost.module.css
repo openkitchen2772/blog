@@ -1,0 +1,66 @@
+@keyframes fadeIn {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.FullPost {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.Back a,
+.Back a:active { 
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    opacity: 0.4;
+}
+
+.Back a:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.Title {
+    margin: 20px 0px 50px 0px;
+    padding: 0px 100px;
+    box-sizing: border-box;
+    font-size: 17pt;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-7vh)
+}
+
+.Title.Show {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.SubHeading {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.Content {
+    margin: 20px 0px;
+    padding: 0px 120px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 1.7;
+    white-space: pre-line;
+    opacity: 0;
+    transform: translateY(-7vh);
+}
+
+.Content.Show {
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}

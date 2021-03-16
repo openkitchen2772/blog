@@ -17,7 +17,7 @@ const About = (props) => {
             <div className={classes.Content}>
                 <div className={classes.Name}>William Ko</div>
                 <p>Software developer from Hong Kong, passionate in building application and exploring problem-solving wisdom.</p>
-                <p><FontAwesomeIcon icon={faICursor} style={{ color: "#888888", marginRight: "20px" }} />Javascript, GoLang, C#</p>
+                <p><FontAwesomeIcon icon={faICursor} style={{ color: "#888888", marginLeft: "5px", marginRight: "15px" }} />Javascript, GoLang, C#</p>
                 <p><FontAwesomeIcon icon={faToolbox} style={{ color: "#888888", marginRight: "10px" }} />ReactJS, .Net, GoLang Server-Side, Docker, MongoDB</p>
                 <p><FontAwesomeIcon icon={faDraftingCompass} style={{ color: "#888888", marginRight: "10px" }} />Devops, CI/CD, AWS</p>
                 <div className={classes.Signature}>

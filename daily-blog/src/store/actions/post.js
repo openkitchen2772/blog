@@ -4,15 +4,20 @@ import * as actionTypes from './actionTypes';
 
 export const fetchPosts = () => {
     return (dispatch) => {
-        axios.post('api/posts')
+        axios.get('/api/posts')
             .then(response => {
-                console.log(response.data);
                 dispatch(setPost(response.data));
             })
             .catch(err => {
-                console.log(err);
                 dispatch(fetchPostsFailed());
             })
+    }
+}
+
+export const setFullPost = (id) => {
+    return {
+        type: actionTypes.SET_FULL_POST,
+        id: id
     }
 }
 

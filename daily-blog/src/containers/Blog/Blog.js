@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 
 import classes from './Blog.module.css';
-import Post from '../../containers/Blog/Post/Post';
 import * as actions from '../../store/actions/post';
+import Post from '../../containers/Blog/Post/Post';
 
 const Blog = (props) => {
     const [showBlog, setShowBlog] = useState(false);
@@ -31,7 +31,8 @@ const Blog = (props) => {
                 key={"post_" + i} 
                 title={post.title} 
                 content={post.content} 
-                time={post.time} />
+                time={post.time} 
+                link={"post/" + post.id}/>
     });
 
     if(props.error) {

@@ -21,7 +21,8 @@ func main() {
 	pc := controller.NewPostController(client, MONGO_DB)
 
 	r := httprouter.New()
-	r.POST("/posts", pc.GetPosts)
+	r.GET("/post/:id", pc.GetPost)
+	r.GET("/posts", pc.GetPosts)
 	r.GET("/hello", hello)
 	http.ListenAndServe(":8080", r)
 }
