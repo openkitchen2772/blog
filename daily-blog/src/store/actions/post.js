@@ -6,7 +6,13 @@ export const fetchPosts = () => {
     return (dispatch) => {
         axios.get('/api/posts')
             .then(response => {
-                dispatch(setPost(response.data));
+                const data = response.data.map(d => {
+                    return {
+                        ...d,
+                        content: d.content.replace(/\\n/g, "\n")
+                    }
+                });
+                dispatch(setPost(data));
             })
             .catch(err => {
                 dispatch(fetchPostsFailed());
