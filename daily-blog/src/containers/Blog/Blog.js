@@ -31,21 +31,6 @@ const Blog = (props) => {
     useEffect(() => {
         const matchPosts = props.posts.filter(p => p.title.toLowerCase().includes(searchKey.toLowerCase()));
         setOnShowPosts(matchPosts);
-
-        // let searchTimer;
-
-        // if(props.posts) {
-        //     searchTimer = setTimeout(() => {
-        //         const matchPosts = props.posts.filter(p => p.title.toLowerCase().includes(searchKey.toLowerCase()));
-        //         setOnShowPosts(matchPosts);
-        //     }, 100);
-        // }
-
-        // return () => {
-        //     if(searchTimer) {
-        //         clearTimeout(searchTimer);
-        //     }
-        // }
     }, [searchKey, props.posts]);
 
     const onSearchPosts = (e) => {
