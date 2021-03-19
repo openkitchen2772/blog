@@ -8,11 +8,13 @@ import Post from '../../containers/Blog/Post/Post';
 const Blog = (props) => {
     const [showBlog, setShowBlog] = useState(false);
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [searchKey, setSearchKey] = useState('');
+    const [onShowPosts, setOnShowPosts] = useState([]);
     
     useEffect(() => {
         // onload show page fadeIn animation
         setShowBlog(true);
-        
+
         // onload set page timer
         const timer = setInterval(() => {
             setCurrentTime(new Date());
@@ -26,7 +28,31 @@ const Blog = (props) => {
         }
     }, []);
 
-    let posts = props.posts.map((post, i) => {
+    useEffect(() => {
+        const matchPosts = props.posts.filter(p => p.title.toLowerCase().includes(searchKey.toLowerCase()));
+        setOnShowPosts(matchPosts);
+
+        // let searchTimer;
+
+        // if(props.posts) {
+        //     searchTimer = setTimeout(() => {
+        //         const matchPosts = props.posts.filter(p => p.title.toLowerCase().includes(searchKey.toLowerCase()));
+        //         setOnShowPosts(matchPosts);
+        //     }, 100);
+        // }
+
+        // return () => {
+        //     if(searchTimer) {
+        //         clearTimeout(searchTimer);
+        //     }
+        // }
+    }, [searchKey, props.posts]);
+
+    const onSearchPosts = (e) => {
+        setSearchKey(e.target.value);
+    }
+
+    let posts = onShowPosts.map((post, i) => {
         return <Post
                 key={"post_" + i} 
                 title={post.title} 
@@ -47,7 +73,7 @@ const Blog = (props) => {
                 <div>Total articles: {props.posts.length}</div>
                 <div>{new Date().toString().substring(0, 33)}</div>
                 <div>
-                    Search: <input type="text" className={classes.Search} />
+                    Search: <input type="text" className={classes.Search} value={searchKey} onChange={onSearchPosts} />
                 </div>
             </div>
             

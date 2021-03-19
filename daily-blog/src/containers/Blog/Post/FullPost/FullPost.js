@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
+import ReactMarkdown from 'react-markdown';
 
 import classes from './FullPost.module.css';
 import * as actions from '../../../../store/actions/post';
 import Auxiliary from '../../../../hoc/Auxiliary/Auxiliary';
 
 const FullPost = (props) => {
+    const ImageDiv = (props) => <div className={classes.Image}><img src={props.src} alt={props.alt}/></div>;
+
     const [show, setShow] = useState(false);
 
     useEffect(() => {
@@ -46,7 +49,9 @@ const FullPost = (props) => {
                 </div>
                 <div className={contentClasses.join(' ')}>
                     <div>
-                        {props.fullPost.content}
+                        <ReactMarkdown 
+                            source={props.fullPost.content}
+                            renderers={{ image: (props) => <ImageDiv {...props} />}} />
                     </div>
                 </div>
             </Auxiliary>

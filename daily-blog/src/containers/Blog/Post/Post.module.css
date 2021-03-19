@@ -12,6 +12,20 @@
     color: #666666;
 }
 
+.Content {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.Content h1,
+.Content h2,
+.Content h3,
+.Content h4,
+.Content h5,
+.Content h6 {
+    font-weight: normal;
+}
+
 .ReadMore a {
     text-decoration: none;
     margin: 5px auto;

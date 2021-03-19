@@ -59,6 +59,19 @@
     transform: translateY(-7vh);
 }
 
+.Content .Image {
+    text-align: center;
+}
+
+.Content h1,
+.Content h2,
+.Content h3,
+.Content h4,
+.Content h5,
+.Content h6 {
+    font-weight: normal;
+}
+
 .Content.Show {
     animation: fadeIn 0.5s ease-out;
     animation-delay: 0.3s;
