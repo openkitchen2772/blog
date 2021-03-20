@@ -15,6 +15,7 @@ COPY ./api.go .
 COPY ./keys.go .
 COPY ./Dockerfile .
 COPY ./Dockerfile.dev .
+COPY ./upload ./upload
 
 RUN go build -v
 

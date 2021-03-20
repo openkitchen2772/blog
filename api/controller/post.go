@@ -3,8 +3,11 @@ package controller
 import (
 	"api/model"
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
+	"os"
+	"path"
 
 	"github.com/julienschmidt/httprouter"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -57,4 +60,18 @@ func (pc PostController) GetPosts(rw http.ResponseWriter, r *http.Request, _ htt
 		http.Error(rw, "Internal Server Error: Write response failed.\n", http.StatusInternalServerError)
 		return
 	}
+}
+
+func (pc PostController) GetUploadImage(rw http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	root, _ := os.Getwd()
+	image := ps.ByName("filename")
+
+	path := path.Join(root, "upload", "image", image)
+	f, err := os.Open(path)
+	if err != nil {
+		log.Println(err.Error())
+		http.Error(rw, "Error: Unable to open image file: "+path, http.StatusNotFound)
+	}
+
+	io.Copy(rw, f)
 }

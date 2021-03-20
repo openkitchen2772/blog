@@ -23,6 +23,7 @@ func main() {
 	r := httprouter.New()
 	r.GET("/post/:id", pc.GetPost)
 	r.GET("/posts", pc.GetPosts)
+	r.GET("/upload/image/:filename", pc.GetUploadImage)
 	r.GET("/hello", hello)
 	http.ListenAndServe(":8080", r)
 }

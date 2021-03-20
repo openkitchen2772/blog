@@ -10,7 +10,7 @@ import * as actions from '../../../../store/actions/post';
 import Auxiliary from '../../../../hoc/Auxiliary/Auxiliary';
 
 const FullPost = (props) => {
-    const ImageDiv = (props) => <div className={classes.Image}><img src={props.src} alt={props.alt}/></div>;
+    const ImageDiv = (props) => <span className={classes.Image}><img src={props.src} alt={props.alt}/></span>;
 
     const [show, setShow] = useState(false);
 
