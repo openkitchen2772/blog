@@ -91,3 +91,23 @@
     animation-delay: 0.3s;
     animation-fill-mode: forwards;
 }
+
+@media (max-width: 1200px) {
+    .Title {
+        padding: 0px 40px;
+    }
+
+    .Content {
+        padding: 0px 40px;
+    }
+}
+
+@media (max-width: 850px) {
+    .Title {
+        padding: 0px 20px;
+    }
+
+    .Content {
+        padding: 0px 20px;
+    }
+}
