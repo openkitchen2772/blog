@@ -8,15 +8,19 @@ import Toolbar from '../../components/UI/Toolbar/Toolbar';
 const Layout = (props) => {
     const [showDeviceDrawer, setShowDeviceDrawer] = useState(false);
     
-    const onSideDrawerToggle = () => {
-        setShowDeviceDrawer(!showDeviceDrawer);
+    const onSideDrawerOpen = () => {
+        setShowDeviceDrawer(true);
+    }
+
+    const onSideDrawerClose = () => {
+        setShowDeviceDrawer(false);
     }
 
     return (
         <Auxiliary>
-            <Toolbar showDrawer={showDeviceDrawer} clicked={onSideDrawerToggle} />
+            <Toolbar showDrawer={showDeviceDrawer} openedDrawer={onSideDrawerOpen} closedDrawer={onSideDrawerClose} />
             <header>
-                <SideDrawer show={showDeviceDrawer} switchedPage={onSideDrawerToggle} />
+                <SideDrawer show={showDeviceDrawer} switchedPage={onSideDrawerClose} />
             </header>
             <main className={classes.Content}>
                 {props.children}

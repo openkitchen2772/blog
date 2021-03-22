@@ -7,9 +7,9 @@ import Backdrop from '../Backdrop/Backdrop';
 const Toolbar = (props) => {
     return (
         <div className={classes.Toolbar}>
-            <Backdrop show={props.showDrawer} clicked={props.clicked}/>
+            <Backdrop show={props.showDrawer} clicked={props.closedDrawer}/>
             <div className={classes.ToolbarToggle}>
-                <ToolbarToggle clicked={props.clicked}/>
+                <ToolbarToggle clicked={props.openedDrawer}/>
             </div>
         </div>
     )
