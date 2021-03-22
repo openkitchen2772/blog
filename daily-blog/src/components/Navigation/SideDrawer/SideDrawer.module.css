@@ -7,19 +7,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 200;
-    transition: transform 0.3 ease-out;
+    z-index: 300;
     box-shadow: 5px 0px 8px #aaaaaa;
     color: #eeeeee;
     text-align: center;
-}
-
-.Open {
-    transform: translateX(0);
-}
-
-.Close {
-    transform: translateX(-100%);
 }
 
 .Header {
@@ -92,4 +83,19 @@
 .Copyright {
     margin-top: 70px;
     font-size: 9pt;
+}
+
+@media (max-width: 850px) {
+    .SideDrawer {
+        transition: transform 0.3s ease-out;
+        transform: translateX(-100vw);
+    }
+
+    .SideDrawer.Open {
+        transform: translateX(0);
+    }
+
+    .SideDrawer.Close {
+        transform: translateX(-100vw);
+    }
 }

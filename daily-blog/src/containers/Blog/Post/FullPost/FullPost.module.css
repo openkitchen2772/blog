@@ -64,6 +64,17 @@
     margin-bottom: 40px;
 }
 
+.Content .Image img {
+    max-width: 700px;
+}
+
+.Content pre {
+    padding: 10px 30px 20px 30px;
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+}
+
 .Content h1,
 .Content h2,
 .Content h3,

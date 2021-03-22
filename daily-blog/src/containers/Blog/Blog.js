@@ -55,7 +55,7 @@ const Blog = (props) => {
     return (
         <div className={showBlog ? [classes.Blog, classes.Show].join(' '): classes.Blog}>
             <div className={classes.Header}>
-                <div>Total articles: {props.posts.length}</div>
+                <div>Articles: {props.posts.length}</div>
                 <div>{new Date().toString().substring(0, 33)}</div>
                 <div>
                     Search: <input type="text" className={classes.Search} value={searchKey} onChange={onSearchPosts} />

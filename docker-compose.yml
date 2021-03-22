@@ -17,8 +17,21 @@ services:
       - ./daily-blog:/app
       - /app/node_modules
   api:
+    environment: 
+      - APP_ENV=development
+      - MONGO_USERNAME_DEV=admin
+      - MONGO_PASSWORD_DEV=admin
+      - MONGO_HOST_DEV=mongodb://mongo:27017
+      - MONGO_DB_DEV=development
     build:
       context: ./api
+      dockerfile: Dockerfile.dev
+  mongo:
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    build:
+      context: ./mongo
       dockerfile: Dockerfile.dev
     
     

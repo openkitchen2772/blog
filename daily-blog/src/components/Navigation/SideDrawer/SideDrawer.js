@@ -9,13 +9,15 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import Logo from '../../UI/Logo/Logo';
 
 const SideDrawer = (props) => {
-    let sideDrawerClasses = [classes.SideDrawer, classes.Open];
+    const sideDrawerClasses = [classes.SideDrawer];
     if(!props.show) {
-        sideDrawerClasses = [classes.SideDrawer, classes.Close];
+        sideDrawerClasses.push(classes.Close);
+    } else {
+        sideDrawerClasses.push(classes.Open);
     }
 
     return (
-        <div className={sideDrawerClasses.join(" ")}>
+        <div className={sideDrawerClasses.join(" ")} onClick={props.switchedPage}>
             <header className={classes.Header}>
                 <div className={classes.Logo}>
                     <Logo />
