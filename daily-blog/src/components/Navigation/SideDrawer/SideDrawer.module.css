@@ -88,7 +88,7 @@
 @media (max-width: 850px) {
     .SideDrawer {
         transition: transform 0.3s ease-out;
-        transform: translateX(-100vw);
+        transform: translateX(-100%);
     }
 
     .SideDrawer.Open {
@@ -96,6 +96,6 @@
     }
 
     .SideDrawer.Close {
-        transform: translateX(-100vw);
+        transform: translateX(-100%);
     }
 }

@@ -56,7 +56,7 @@ const Blog = (props) => {
         <div className={showBlog ? [classes.Blog, classes.Show].join(' '): classes.Blog}>
             <div className={classes.Header}>
                 <div>Articles: {props.posts.length}</div>
-                <div>{new Date().toString().substring(0, 33)}</div>
+                <div className={classes.DesktopOnly}>{new Date().toString().substring(0, 33)}</div>
                 <div>
                     Search: <input type="text" className={classes.Search} value={searchKey} onChange={onSearchPosts} />
                 </div>

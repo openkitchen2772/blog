@@ -21,7 +21,7 @@ const About = (props) => {
                 <p><FontAwesomeIcon icon={faToolbox} style={{ color: "#888888", marginRight: "10px" }} />ReactJS, .Net, GoLang Server-Side, Docker, MongoDB</p>
                 <p><FontAwesomeIcon icon={faDraftingCompass} style={{ color: "#888888", marginRight: "10px" }} />Devops, CI/CD, AWS</p>
                 <div className={classes.Signature}>
-                    <img src={Signature} width="200" />
+                    <img src={Signature} />
                 </div>
             </div>
         </div>

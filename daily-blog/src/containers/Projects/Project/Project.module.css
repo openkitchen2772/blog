@@ -67,4 +67,16 @@
     .Project {
         width: 70vw;
     }
+
+    .ProjectTitle {
+        font-size: 14pt;
+    }
+    
+    .ProjectDescription {
+        font-size: 10pt;
+    }
+
+    .ProjectTags {
+        font-size: 8pt;
+    }
 }

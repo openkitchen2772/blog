@@ -40,3 +40,26 @@
     margin-top: 30px;
     text-align: right;
 }
+
+.Signature img {
+    width: 200px;
+}
+
+@media (max-width: 600px) {
+    .Name {
+        font-size: 14pt;
+    }
+
+    .Content {
+        width: 90%;
+        font-size: 10.5pt;
+    }
+
+    .Signature {
+        margin-top: 10px;
+    }
+
+    .Signature img {
+        width: 150px;
+    }
+}
