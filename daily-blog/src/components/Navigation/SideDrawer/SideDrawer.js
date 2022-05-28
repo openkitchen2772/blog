@@ -24,7 +24,7 @@ const SideDrawer = (props) => {
                 </div>
                 <div className={classes.BlogTitle}>
                     <h3>William's Blog</h3>
-                    <p>ReactJS | GoLang | .NET</p>
+                    <p>ReactJS | GoLang | Devops</p>
                     <p>Front-end | Back-end Developer</p>
                 </div>
                 <div className={classes.ExternalLinks}>
@@ -40,11 +40,11 @@ const SideDrawer = (props) => {
             <footer className={classes.Footer}>
                 <div className={classes.Quote}>
                     <div className={classes.QuoteMark}><FontAwesomeIcon icon={faQuoteLeft} size="sm"/></div>
-                    <div>Dreams and passion are more powerful than facts and reality.</div>
+                    <div>Rest if you need to, but never quit.</div>
                     <div className={classes.QuoteMark}><FontAwesomeIcon icon={faQuoteRight} size="sm"/></div>
                 </div>
                 <div className={classes.Copyright}>
-                    <FontAwesomeIcon icon={faCopyright}/> 2021, Created by William Ko
+                    <FontAwesomeIcon icon={faCopyright}/> 2022, Created by William Ko
                 </div>
             </footer>
         </div>
