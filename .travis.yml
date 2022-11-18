@@ -21,7 +21,7 @@ deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: blog
-  env: Blog-env
+  env: Blogenvmigrated-env
   bucket_name: elasticbeanstalk-us-east-2-571983945258
   bucket_path: blog
   on:
