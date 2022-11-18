@@ -21,13 +21,13 @@ const Projects = (props) => {
     return (
         <div className={showProjects ? [classes.Projects, classes.Show].join(' ') : classes.Projects}>
             <div className={classes.Content}>
-                <Project 
+                {/* <Project 
                     icon={DotensIcon}
                     name="DotENS"
                     description={"Dotens is a Web3 application for ENS domain exploring and backordering. Metamask is required to use the application."}
                     clicked={() => {projectClicked("https://dotens-ui-test.web.app/explore")}}
                     width="175px"
-                    tags={["ReactJS", "Firebase", "MongoDB", "NodeJS", "ethers.js"]} />
+                    tags={["ReactJS", "Firebase", "MongoDB", "NodeJS", "ethers.js"]} /> */}
                 <Project 
                     icon={StrangerAlbumIcon}
                     name="Stranger Album"
